@@ -48,3 +48,14 @@ for(let i = 0;i<size;i++){
         }
     } 
 }
+//UC5
+let arr2= new Array();
+for(let i = 10;i<100;i++){
+    let a = i%10;
+    let x = Number.parseInt(i/10);
+    let b = x%10;
+    if(a==b){
+        arr2.push(i);
+    }
+}
+console.log(arr2);
