@@ -1,4 +1,4 @@
-//UC2
+//UC1,2
 let arr = new Array();
 for(let i =1 ;i<10;i++){
     let digit1 = Math.floor(Math.random()*900)+100;
@@ -25,3 +25,26 @@ if(array.length==0){
     array.push(n);
 }
 console.log(array);
+
+//UC4
+let arr1 = [0, -1, 2, -3, 1];
+arr1.sort();
+let size = arr1.length;
+for(let i = 0;i<size;i++){
+    let left = i+1;
+    let right = size -1;
+    let x = arr1[i];
+    while(left<right){
+        if(x+arr1[left]+arr1[right]==0){
+            console.log("Three numbers with addition zero are: "+x+" "+arr1[left]+" "+arr1[right]);
+            left++;
+            right--;
+        }
+        else if(x+arr1[left]+arr1[right]<0){
+            left++;
+        }
+        else{
+            right--;
+        }
+    } 
+}
